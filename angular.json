@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "w10Ang"
+    }
+  },
+  "defaultProject": "w10Ang",
+  "cli": {
+    "analytics": "157eda69-a9af-4200-99cd-875369ced8f1"
+  }
 }

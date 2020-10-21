@@ -1,0 +1,44 @@
+<br>
+<h2>Actor List</h2>
+<div class="section">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Birth Year</th>
+        <th>Select</th>
+      </tr>
+      <tr *ngFor="let item of actorsDB">
+        <td>{{item.name}}</td>
+        <td>{{item.bYear}}</td>
+        <td><a class = "btn btn-success" (click)="selectActor(item)">Select</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="alert alert-info" role="alert" *ngIf="selectedActor!=null" >
+    <h3> Selected Actor: {{selectedActor.name}}</h3>
+  </div>
+  
+  <br>
+  
+  <h2>Movies List</h2>
+  <div class="section">
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Year of Production</th>
+        <th>Select</th>
+      </tr>
+      <tr *ngFor="let item of moviesDB">
+        <td>{{item.title}}</td>
+        <td>{{item.year}}</td>
+        <td><a class = "btn btn-success" (click)="selectMovie(item)">Select</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="alert alert-info" role="alert" *ngIf="selectedMovie!=null" >
+    <h3> Selected Movie: {{selectedMovie.title}}</h3>
+  </div>
+
+  <td><button type="submit" style="margin-left:10px;margin-bottom:10px;" class="btn btn-primary" (click)="onInsertActor()">Insert Actor</button></td>
